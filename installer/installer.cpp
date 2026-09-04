@@ -17,23 +17,33 @@ limitations under the License.
 
 #include <wx/wx.h>
 
+namespace
+{
+    class InstallerApp final : public wxApp
+    {
+    public:
+        bool OnInit() override
+        {
+            wxMessageBox(
+                "Gyrfalcon Installer",
+                "Gyrfalcon Compiler",
+                wxOK | wxICON_INFORMATION
+            );
+
+            return false;
+        }
+    };
+
+    wxIMPLEMENT_APP_NO_MAIN(InstallerApp);
+}
+
 namespace gyrfalcon::installer
 {
     int run()
     {
-        wxInitializer initializer;
-
-        if (!initializer)
-        {
-            return 1;
-        }
-
-        wxMessageBox(
-            "Gyrfalcon Installer",
-            "Gyrfalcon Compiler",
-            wxOK | wxICON_INFORMATION
+        return wxEntry(
+            0,
+            nullptr
         );
-
-        return 0;
     }
 }
