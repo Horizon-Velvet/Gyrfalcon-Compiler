@@ -1,0 +1,16 @@
+# secrets
+.secrets/
+.secrets/**
+
+# builds
+build/
+cmake-build-*/
+out/
+
+# other
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
