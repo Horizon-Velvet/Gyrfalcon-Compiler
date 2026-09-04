@@ -1,14 +1,5 @@
-# secrets
 .secrets/
 .secrets/**
-.vscode/
-
-# builds
-build/
-cmake-build-*/
-out/
-
-# compiled files
 *.o
 *.obj
 *.a
